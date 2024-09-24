@@ -3,7 +3,32 @@ guid: 8d0ba2a7f86c199408d91d66fe834812
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Box
+    second: {fileID: 2100000, guid: ecf3607381c46334a959d7ad02156e6c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Spider
+    second: {fileID: 2100000, guid: 95890d97e96a24f4baf863ee451f761f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Spider_Eye
+    second: {fileID: 2100000, guid: 3adbd23422dd6cc42b26ea762378102c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Spider_Fur
+    second: {fileID: 2100000, guid: e95cf809dad2bc247910dd75b08310c8, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Spider_teeth
+    second: {fileID: 2100000, guid: 7be20fc401b148543839c8d5d38ddcb9, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
@@ -93,11 +118,11 @@ ModelImporter:
     globalScale: 1
     rootMotionBoneName: 
     hasTranslationDoF: 0
-    hasExtraRoot: 0
+    hasExtraRoot: 1
     skeletonHasParents: 1
   lastHumanDescriptionAvatarSource: {instanceID: 0}
   autoGenerateAvatarMappingIfUnspecified: 1
-  animationType: 2
+  animationType: 1
   humanoidOversampling: 1
   avatarSetup: 0
   addHumanoidExtraRootOnlyWhenUsingAvatar: 1

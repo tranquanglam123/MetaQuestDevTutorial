@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
@@ -40,15 +41,20 @@ public class SpawnObjects : MonoBehaviour
             ClearCollection();
         }
         //Play the animation
-        //if (OVRInput.Get(OVRInput.Button.Start, OVRInput.Controller.LTouch))
-        //{
-        //    try { roomManager.RemoveSceneLoaded(); }
-        //    catch (MissingReferenceException)
-        //    {
-        //        Debug.Log("Remove Room model successfully, getting new room...");
-        //    }
+        if (OVRInput.Get(OVRInput.Button.Start, OVRInput.Controller.LTouch))
+        {
+            try {
+                foreach(var obj in spawnObjects)
+                {
+                    spawnAnimation.PlayAllAssetAnimations(obj.GetComponent<Animation>());
+                }
+            }
+            catch (MissingReferenceException)
+            {
+                Debug.Log("Error playing the animations in spawned prefab");
+            }
 
-        //}
+        }
     }
 
     public IEnumerator SpawnObjectsToScene()
@@ -83,9 +89,9 @@ public class SpawnObjects : MonoBehaviour
         {
             SpawnedObjects = new List<GameObject>();
         }
-        foreach (Transform scu in spawnParent.transform)
+        foreach (Transform obj in spawnParent.transform)
         {
-            GameObject.Destroy(scu.gameObject);
+            GameObject.Destroy(obj.gameObject); 
         }
         Debug.Log("Collection Cleared: " + SpawnedObjects.Count);
     }
