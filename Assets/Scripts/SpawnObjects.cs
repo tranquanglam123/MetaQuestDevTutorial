@@ -84,6 +84,7 @@ public class SpawnObjects : MonoBehaviour
         if (SpawnedObjects != null)
         {
             SpawnedObjects.Clear();
+            spawnCount = 0;
         }
         else
         {
