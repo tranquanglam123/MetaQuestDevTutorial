@@ -1,7 +1,9 @@
+using Oculus.Interaction;
 using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class AnimationHelper
 {
@@ -87,4 +89,5 @@ public class AnimationHelper
         // Optionally, handle finishing all animations (e.g., stop the coroutine)
         Debug.Log("All animations played!");
     }
+
 }
