@@ -96,4 +96,21 @@ public class SpawnObjects : MonoBehaviour
         }
         Debug.Log("Collection Cleared: " + SpawnedObjects.Count);
     }
+
+    public IEnumerator AnimationOnHoverHandler()
+    {
+        if(SpawnedObjects != null)
+        {
+            foreach (Transform obj in spawnParent.transform)
+            {
+                Animation anim = obj.GetComponent<Animation>();
+                anim.Stop();
+                CustomBttnEventWrapper eventWrap = obj.Find("ISDK_RayGrabInteraction").GetComponent<CustomBttnEventWrapper>();
+                eventWrap.WhenHover.AddListener(() => spawnAnimation.PlayAllAssetAnimations(anim));
+                eventWrap.WhenUnhover.AddListener(() => spawnAnimation.StopAssetAnimation(anim));
+            }
+        }
+        yield return null;
+    }
+
 }

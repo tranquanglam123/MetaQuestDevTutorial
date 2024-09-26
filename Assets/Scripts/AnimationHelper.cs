@@ -90,4 +90,9 @@ public class AnimationHelper
         Debug.Log("All animations played!");
     }
 
+    public void StopAssetAnimation(Animation animation)
+    {
+        animation.Stop();
+    }
+
 }
