@@ -11,9 +11,15 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Samples/Meta XR Core SDK/68.0.2/Sample Scenes/ControllerDrivenHandPoses.unity
     guid: 7ea9f7c90c2fa404d86276a633b59903
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/SpawnObjects.unity
     guid: 7c1eb20ec0f591943a76ec27b1be286c
+  - enabled: 1
+    path: Assets/Scenes/Locomotion.unity
+    guid: a77b7f2f4ecc9e649b234f4b14b93258
+  - enabled: 0
+    path: Assets/Scenes/testloco.unity
+    guid: 4d82a632386e199459aa25040d7f6d67
   m_configObjects:
     Unity.XR.Oculus.Settings: {fileID: 11400000, guid: 362d41651d8d7e645ac8c0daac38d9b0, type: 2}
     com.unity.xr.management.loader_settings: {fileID: 11400000, guid: 13615dbef5858da43a2f6a16d1ec0f02, type: 2}
